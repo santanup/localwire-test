@@ -15,7 +15,7 @@ import PostItemSmallSkeleton from "../../component/PostItemSmallSkeleton";
 const Lang = ({lang, posts: postList}) => {
     const [posts, setPosts] = useState(postList);
     const [hasMore, setHasMore] = useState(true);
-    console.log({lang, posts, hasMore});
+    // console.log({lang, posts, hasMore});
 
     useEffect(() => {
         setPosts(postList);
@@ -78,9 +78,9 @@ const Lang = ({lang, posts: postList}) => {
 };
 
 Lang.getInitialProps = async ctx => {
-    console.log(ctx.pathname);
+    // console.log(ctx.pathname, typeof window);
     const lang = ctx.pathname;
-    const posts = typeof window !== "undefined" ? await getAllPostByLanguage(lang) : [];
+    const posts = typeof window === "undefined" ? await getAllPostByLanguage(lang) : [];
     return {lang, posts};
 };
 
