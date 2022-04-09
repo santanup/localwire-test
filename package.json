@@ -9,7 +9,7 @@
     "axios": "^0.19.2",
     "clsx": "latest",
     "material-ui-popup-state": "^1.5.4",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "next": "latest",
     "next-images": "^1.4.0",
     "prop-types": "latest",
